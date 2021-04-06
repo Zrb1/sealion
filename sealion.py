@@ -22,14 +22,7 @@ def set_env():
 
 def start():
 
-    xmr = """
-        docker run --name miner --rm -it \
-        -e POOL_URL=$POOL_URL \
-        -e POOL_USER=$POOL_USER \
-        -e POOL_PASS=$POOL_PASS \
-        -e DONATE_LEVEL=$DONATE_LEVEL \ 
-        metal3d/xmrig
-        """
+    xmr = "docker run --name miner --rm -it -e POOL_URL=$POOL_URL -e POOL_USER=$POOL_USER -e POOL_PASS=$POOL_PASS -e DONATE_LEVEL=$DONATE_LEVEL metal3d/xmrig"
 
     os.system(xmr)
     
@@ -41,7 +34,6 @@ def start():
 if __name__ == "__main__":
     logging.basicConfig(format='%(asctime)s %(message)s',
             filename='sealion_log.log', 
-            encoding='utf-8', 
             level=logging.DEBUG)
 
     logging.debug('starting sealion!')
