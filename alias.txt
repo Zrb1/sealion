@@ -1,0 +1,6 @@
+# alias xmr = "docker run --name miner --rm -it \
+    -e POOL_URL=$POOL_URL \
+    -e POOL_USER=$POOL_USER \
+    -e POOL_PASS=$POOL_PASS \
+    -e DONATE_LEVEL=$DONATE_LEVEL \ 
+    metal3d/xmrig"

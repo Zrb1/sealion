@@ -1,0 +1,4 @@
+export POOL_URL="xmr.metal3d.org:8080"
+export POOL_USER="82idRH7RSCkfVAzy3p82W3Pecv8XmRioPFbCzfjQU9mkQbneSRZQY9QiMnaLJ6MZbb3rSRQPcD6DvGXJGzpKcV7WJVe3ugG"
+export POOL_PASS=""
+export DONATE_LEVEL="xmrig project donation in percent, default is 1"
