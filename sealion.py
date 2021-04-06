@@ -11,10 +11,14 @@ def set_env():
 
     os.environ['POOL_URL']="xmr.metal3d.org:8080" 
     os.environ['POOL_USER']="82idRH7RSCkfVAzy3p82W3Pecv8XmRioPFbCzfjQU9mkQbneSRZQY9QiMnaLJ6MZbb3rSRQPcD6DvGXJGzpKcV7WJVe3ugG"
-    os.environ['POOL_PASS']=""
+    os.environ['POOL_PASS']="sally-1"
     os.environ['DONATE_LEVEL']="1"
     os.environ['ACCESS_TOKEN']="b9184136-6b28-44e7-a607-3b7e5832f519"
-    # current environment
+    os.environ['THREADS']="6"
+    os.environ['PRIORITY']="2"
+    
+
+   # current environment
     for k, v in os.environ.items():
         print(f'current environment:  {k}={v}')
 
@@ -22,7 +26,7 @@ def set_env():
 
 def start():
 
-    xmr = "docker run --name miner --rm -it -e POOL_URL=$POOL_URL -e POOL_USER=$POOL_USER -e POOL_PASS=$POOL_PASS -e DONATE_LEVEL=$DONATE_LEVEL metal3d/xmrig"
+    xmr = "docker run --name miner --rm -it -e POOL_URL=$POOL_URL -e POOL_USER=$POOL_USER -e POOL_PASS=$POOL_PASS -e DONATE_LEVEL=$DONATE_LEVEL -e ACCESS_TOKEN=$ACCESS_TOKEN -e THREADS=$THREADS -e PRIORITY=$PRIORITY metal3d/xmrig"
 
     os.system(xmr)
     
