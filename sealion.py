@@ -13,7 +13,7 @@ def set_env():
     os.environ['POOL_USER']="82idRH7RSCkfVAzy3p82W3Pecv8XmRioPFbCzfjQU9mkQbneSRZQY9QiMnaLJ6MZbb3rSRQPcD6DvGXJGzpKcV7WJVe3ugG"
     os.environ['POOL_PASS']=""
     os.environ['DONATE_LEVEL']="1"
-
+    os.environ['ACCESS_TOKEN']="b9184136-6b28-44e7-a607-3b7e5832f519"
     # current environment
     for k, v in os.environ.items():
         print(f'current environment:  {k}={v}')
