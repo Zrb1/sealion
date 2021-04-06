@@ -26,7 +26,7 @@ def start():
 
     os.system(xmr)
     
-    print('starting:  ', xmr)
+    print('\nfinished xmr session!:  ', xmr, '\n')
 
     return True
 
@@ -36,11 +36,11 @@ if __name__ == "__main__":
             filename='sealion_log.log', 
             level=logging.DEBUG)
 
-    logging.debug('starting sealion!')
-    try:
-        set_env()
-        start()
-        logging.debug('start successful')
-    except error as e:
-        logging.debug('error during start() call!', e)
-    
+    while (True):
+        logging.debug('starting sealion!')
+        try:
+            set_env()
+            start()
+            logging.debug('start successful')
+        except error as e:
+            logging.debug('error during start() call!', e) 
